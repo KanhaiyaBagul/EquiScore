@@ -175,56 +175,7 @@ export default function WhatIfSimulator() {
 
   return (
     <div className="space-y-6">
-      {/* File & Persona Selector Pill Row */}
-      <div className="p-4 bg-[#0A0A0A] border border-[#222222] rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div>
-          <span className="text-[10px] font-mono uppercase text-neutral-400 block">Baseline Data Source</span>
-          <h2 className="text-sm font-bold text-white mt-0.5 font-mono">
-            backend/data/{profile.filename} ({profile.name})
-          </h2>
-        </div>
 
-        <div className="inline-flex flex-wrap p-1 bg-black rounded-full border border-[#262626]">
-          {hasCustomUploaded && (
-            <button
-              type="button"
-              onClick={() => selectDataset('uploaded')}
-              className={`px-3 py-1.5 text-xs font-mono rounded-full transition-all cursor-pointer ${
-                activeKey === 'uploaded' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
-              }`}
-            >
-              ★ Uploaded Statement
-            </button>
-          )}
-          <button
-            type="button"
-            onClick={() => selectDataset('arun')}
-            className={`px-3 py-1.5 text-xs font-mono rounded-full transition-all cursor-pointer ${
-              activeKey === 'arun' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
-            }`}
-          >
-            📄 Arun (319 txns)
-          </button>
-          <button
-            type="button"
-            onClick={() => selectDataset('ramesh')}
-            className={`px-3 py-1.5 text-xs font-mono rounded-full transition-all cursor-pointer ${
-              activeKey === 'ramesh' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
-            }`}
-          >
-            📄 Ramesh (1,357 txns)
-          </button>
-          <button
-            type="button"
-            onClick={() => selectDataset('priya')}
-            className={`px-3 py-1.5 text-xs font-mono rounded-full transition-all cursor-pointer ${
-              activeKey === 'priya' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
-            }`}
-          >
-            📄 Priya (749 txns)
-          </button>
-        </div>
-      </div>
 
       {/* Main Grid: Controls on left, Side-by-Side Comparison on right */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -242,9 +193,15 @@ export default function WhatIfSimulator() {
           <div>
             <div className="flex justify-between text-xs mb-2">
               <span className="text-neutral-400">Trim / Increase Monthly Operating Costs</span>
-              <span className="num-mono font-bold text-white">
-                {deltaExpense >= 0 ? '+' : ''}₹{deltaExpense.toLocaleString()}
-              </span>
+              <div className="flex items-center gap-1">
+                <span className="text-white font-mono font-bold">₹</span>
+                <input 
+                  type="number" 
+                  value={deltaExpense} 
+                  onChange={(e) => setDeltaExpense(Number(e.target.value) || 0)}
+                  className="bg-[#1A1A1A] text-white font-bold font-mono text-right w-24 outline-none border border-[#333333] focus:border-white rounded-md px-2 py-1 transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none shadow-inner"
+                />
+              </div>
             </div>
             <input
               type="range"
@@ -265,9 +222,15 @@ export default function WhatIfSimulator() {
           <div>
             <div className="flex justify-between text-xs mb-2">
               <span className="text-neutral-400">Expand Monthly Digital UPI / Customer Receipts</span>
-              <span className="num-mono font-bold text-white">
-                {deltaGross >= 0 ? '+' : ''}₹{deltaGross.toLocaleString()}
-              </span>
+              <div className="flex items-center gap-1">
+                <span className="text-white font-mono font-bold">₹</span>
+                <input 
+                  type="number" 
+                  value={deltaGross} 
+                  onChange={(e) => setDeltaGross(Number(e.target.value) || 0)}
+                  className="bg-[#1A1A1A] text-white font-bold font-mono text-right w-24 outline-none border border-[#333333] focus:border-white rounded-md px-2 py-1 transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none shadow-inner"
+                />
+              </div>
             </div>
             <input
               type="range"
@@ -288,9 +251,15 @@ export default function WhatIfSimulator() {
           <div>
             <div className="flex justify-between text-xs mb-2">
               <span className="text-neutral-400">Pre-Pay Existing Loan EMI / Commit New EMI</span>
-              <span className="num-mono font-bold text-white">
-                {deltaEmi <= 0 ? '' : '+'}₹{deltaEmi.toLocaleString()}
-              </span>
+              <div className="flex items-center gap-1">
+                <span className="text-white font-mono font-bold">₹</span>
+                <input 
+                  type="number" 
+                  value={deltaEmi} 
+                  onChange={(e) => setDeltaEmi(Number(e.target.value) || 0)}
+                  className="bg-[#1A1A1A] text-white font-bold font-mono text-right w-24 outline-none border border-[#333333] focus:border-white rounded-md px-2 py-1 transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none shadow-inner"
+                />
+              </div>
             </div>
             <input
               type="range"
@@ -311,9 +280,15 @@ export default function WhatIfSimulator() {
           <div>
             <div className="flex justify-between text-xs mb-2">
               <span className="text-neutral-400">Add to Emergency Liquidity Buffer</span>
-              <span className="num-mono font-bold text-white">
-                +₹{deltaReserve.toLocaleString()}
-              </span>
+              <div className="flex items-center gap-1">
+                <span className="text-white font-mono font-bold">₹</span>
+                <input 
+                  type="number" 
+                  value={deltaReserve} 
+                  onChange={(e) => setDeltaReserve(Number(e.target.value) || 0)}
+                  className="bg-[#1A1A1A] text-white font-bold font-mono text-right w-24 outline-none border border-[#333333] focus:border-white rounded-md px-2 py-1 transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none shadow-inner"
+                />
+              </div>
             </div>
             <input
               type="range"
@@ -382,31 +357,7 @@ export default function WhatIfSimulator() {
             </div>
           </div>
 
-          {/* Actionable Insights Panel */}
-          <div className="bg-[#0E0E0E] border border-[#222222] rounded-2xl p-6 space-y-3">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">Simulation Analysis & Insights</h4>
-            <div className="space-y-2 text-xs text-neutral-300 font-light">
-              <p>
-                • {deltaExpense < 0
-                  ? `Trimming operational expenses by ₹${Math.abs(deltaExpense).toLocaleString()} boosts your net operating margin to ${(surplusRatio * 100).toFixed(1)}%.`
-                  : 'Operating expenses modeled at baseline level.'}
-              </p>
-              <p>
-                • {deltaGross > 0
-                  ? `Expanding digital customer receipts by ₹${deltaGross.toLocaleString()} enhances cashflow surplus buffer.`
-                  : 'Monthly sales volume modeled at baseline levels.'}
-              </p>
-              <p>
-                • {deltaEmi < 0
-                  ? `Lowering monthly debt reduces your debt service burden to ${(debtRatio * 100).toFixed(1)}% of surplus.`
-                  : 'Debt obligations modeled at current levels.'}
-              </p>
-            </div>
 
-            <div className="pt-3 border-t border-[#222222] text-[11px] text-neutral-500 italic">
-              Note: The What-If simulation operates in an isolated memory buffer. Your baseline underwriting dossier remains 100% immutable.
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -153,50 +153,7 @@ export default function DigitalPassportViewer() {
         </div>
       </div>
 
-      {/* Preset / Active Toggle Tabs */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-3.5 bg-[#0E0E0E] border border-[#222222] rounded-2xl">
-        <span className="text-xs font-mono text-neutral-400">Generate Passport For:</span>
-        <div className="inline-flex flex-wrap p-1 bg-black rounded-full border border-[#262626]">
-          {hasCustom && (
-            <button
-              type="button"
-              onClick={() => selectPreset('custom')}
-              className={`px-3 py-1 text-xs font-mono rounded-full transition-all cursor-pointer ${
-                activeTab === 'custom' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
-              }`}
-            >
-              ★ Uploaded Statement
-            </button>
-          )}
-          <button
-            type="button"
-            onClick={() => selectPreset('arun')}
-            className={`px-3 py-1 text-xs font-mono rounded-full transition-all cursor-pointer ${
-              activeTab === 'arun' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
-            }`}
-          >
-            📄 Arun (319 txns)
-          </button>
-          <button
-            type="button"
-            onClick={() => selectPreset('ramesh')}
-            className={`px-3 py-1 text-xs font-mono rounded-full transition-all cursor-pointer ${
-              activeTab === 'ramesh' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
-            }`}
-          >
-            📄 Ramesh (1,357 txns)
-          </button>
-          <button
-            type="button"
-            onClick={() => selectPreset('priya')}
-            className={`px-3 py-1 text-xs font-mono rounded-full transition-all cursor-pointer ${
-              activeTab === 'priya' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
-            }`}
-          >
-            📄 Priya (749 txns)
-          </button>
-        </div>
-      </div>
+
 
       {/* Passport Document Card Preview - Monochrome */}
       <div className="bg-[#0A0A0A] border-2 border-white/20 rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">

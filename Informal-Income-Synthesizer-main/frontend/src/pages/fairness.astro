@@ -1,0 +1,14 @@
+---
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import FairnessPortal from '../components/react/FairnessPortal';
+---
+
+<DashboardLayout
+  title="Model Governance & Fairness Audit"
+  activeNav="fairness"
+  applicantName="Model Auditor"
+  businessName="Ethical AI Governance Office"
+  statusBadge="AUDIT PASSED"
+>
+  <FairnessPortal client:load />
+</DashboardLayout>

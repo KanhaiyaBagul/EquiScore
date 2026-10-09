@@ -1,0 +1,28 @@
+# Backend & Machine Learning Dependencies
+# Explainable Alternative Credit Scoring & Informal Income Synthesizer
+
+# Core Web Framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+python-multipart>=0.0.9
+
+# Data Processing & Numerical Analysis
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.12.0
+
+# Machine Learning & Explainable AI (XAI)
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+shap>=0.45.0
+fairlearn>=0.10.0
+joblib>=1.3.0
+
+# Document & Report Generation
+reportlab>=4.1.0
+
+# Testing & Utilities
+pytest>=8.0.0
+python-dotenv>=1.0.1
+httpx>=0.27.0

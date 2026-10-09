@@ -1,0 +1,25 @@
+---
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import WhatIfSimulator from '../components/react/WhatIfSimulator';
+---
+
+<DashboardLayout
+  title="What-If Financial Sandbox"
+  activeNav="simulator"
+  applicantName="Ramesh Kumar"
+  businessName="Shree Balaji Chai Stall"
+  statusBadge="SANDBOX MODE"
+>
+  <div class="space-y-6">
+    <div>
+      <span class="text-xs uppercase font-mono tracking-wider text-neutral-400">Financial Education & Exploration</span>
+      <h2 class="text-2xl font-bold text-white mt-0.5">What-If Scenario Simulation Sandbox</h2>
+      <p class="text-xs text-text-secondary mt-1 font-light max-w-3xl">
+        Safely experiment with adjusting your business cashflow parameters to see how score improvements can be unlocked. Your official baseline assessment is 100% immutable and will never be modified.
+      </p>
+    </div>
+
+    <!-- React Island Hydration -->
+    <WhatIfSimulator client:load />
+  </div>
+</DashboardLayout>

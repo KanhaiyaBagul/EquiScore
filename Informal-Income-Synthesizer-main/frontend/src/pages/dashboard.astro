@@ -1,0 +1,14 @@
+---
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import LiveDashboard from '../components/react/LiveDashboard';
+---
+
+<DashboardLayout
+  title="Applicant Assessment Overview | EquiScore XAI"
+  activeNav="dashboard"
+  applicantName="Applicant Profile"
+  businessName="Verified Commercial Records"
+  statusBadge="EVALUATED"
+>
+  <LiveDashboard client:load />
+</DashboardLayout>

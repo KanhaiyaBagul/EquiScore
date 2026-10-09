@@ -1,0 +1,85 @@
+---
+const features = [
+  {
+    tag: "01 // SYNTHESIZER",
+    title: "Informal Income Synthesizer",
+    description: "Reconstructs true recurring earnings from fragmented UPI and cash streams. Automatically filters internal transfers and isolates net operating surplus from gross receipts.",
+    badge: "Time-Series Aggregation",
+    icon: "✦"
+  },
+  {
+    tag: "02 // 0-100 INDEX",
+    title: "Deterministic Financial Health Score",
+    description: "A reproducible, auditable composite index across 5 objective pillars: Cashflow Surplus (30%), Income Consistency (25%), Debt Burden (20%), Reserve Buffer (15%), and Coverage (10%).",
+    badge: "100% Deterministic",
+    icon: "▣"
+  },
+  {
+    tag: "03 // SHAP TRANSPARENCY",
+    title: "Grounded SHAP Feature Attribution",
+    description: "Demystifies the credit-risk model output. Inspect exact positive and negative feature contributions in log-odds space using exact TreeExplainer mathematical formulations.",
+    badge: "Zero Hallucination",
+    icon: "▲"
+  },
+  {
+    tag: "04 // ETHICAL AI",
+    title: "Fairlearn Model Bias Auditor",
+    description: "Continuous algorithmic governance tracking Demographic Parity Difference and Equalized Odds across gender, geography, and business archetypes to prevent systemic bias.",
+    badge: "Audited & Verified",
+    icon: "◈"
+  },
+  {
+    tag: "05 // SANDBOX",
+    title: "What-If Financial Sandbox",
+    description: "An isolated scenario simulator letting borrowers model the score impact of trimming business expenses or expanding weekly digital sales without mutating baseline records.",
+    badge: "Zero Mutation",
+    icon: "◒"
+  },
+  {
+    tag: "06 // VERIFIABLE DOSSIER",
+    title: "Digital Financial Passport",
+    description: "Export an applicant-owned, tamper-evident PDF dossier with complete cashflow evidence, SHAP transparency, and SHA-256 verification hash to present to lenders.",
+    badge: "PDF Export",
+    icon: "▤"
+  }
+];
+---
+
+<section id="features" class="py-20 bg-black border-t border-[#222222]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-mono text-neutral-400 uppercase tracking-widest">Architectural Pillars</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Engineered for Radical Transparency</h2>
+      <p class="text-sm text-text-secondary mt-3 font-light">
+        Replacing opaque bureau black-boxes with deterministic mathematical rigor, explainable AI, and ethical fairness auditing.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((f) => (
+        <div class="card-mono flex flex-col justify-between group hover:border-white/40 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-mono text-neutral-500 tracking-wider">{f.tag}</span>
+              <span class="text-lg w-8 h-8 rounded-lg bg-black border border-[#262626] flex items-center justify-center text-white group-hover:scale-105 transition-transform font-mono">
+                {f.icon}
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-neutral-200 transition-colors">
+              {f.title}
+            </h3>
+            <p class="text-xs text-text-secondary leading-relaxed font-light">
+              {f.description}
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#222222] flex items-center justify-between">
+            <span class="text-[11px] font-medium text-white px-2.5 py-0.5 rounded-full bg-white/10 border border-white/20 font-mono">
+              {f.badge}
+            </span>
+            <span class="text-xs text-neutral-500 group-hover:text-white transition-colors">Inspect →</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import StatementUploader from '../components/react/StatementUploader';
+---
+
+<DashboardLayout
+  title="Upload Financial Statement"
+  activeNav="upload"
+  applicantName="Applicant Ingestion"
+  businessName="Raw Financial Ledgers"
+  statusBadge="AWAITING DATA"
+>
+  <div class="space-y-6">
+    <!-- Header -->
+    <div class="pb-2">
+      <span class="text-xs uppercase font-mono tracking-wider text-neutral-400">Statement Ingestion</span>
+      <h2 class="text-2xl font-bold text-white mt-0.5">Upload Transaction Records</h2>
+      <p class="text-xs text-text-secondary mt-1 font-light max-w-2xl">
+        Upload 3–6 months of transaction records from UPI, bank statements, or digital registers. Our engine parses the cashflows, evaluates risk with calibrated XGBoost, and generates explainable SHAP factors.
+      </p>
+    </div>
+
+    <!-- Interactive Uploader Island -->
+    <StatementUploader client:load />
+  </div>
+</DashboardLayout>

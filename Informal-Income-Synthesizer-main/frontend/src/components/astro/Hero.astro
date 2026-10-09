@@ -1,0 +1,59 @@
+---
+import ScoreTeaser from '../react/ScoreTeaser';
+---
+
+<section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-black">
+  <!-- Subtle Monochrome Ambient Radial Glow behind Hero -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-white/[0.04] blur-[150px] rounded-full pointer-events-none -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <!-- Institutional Tag Pill -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+        <span class="text-xs font-semibold text-neutral-300 tracking-wide uppercase">Alternative Credit & Informal Income Synthesizer</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08] mb-6 font-sans">
+        Unlocking Fair Credit for India's <span class="text-white underline decoration-neutral-600 underline-offset-8">Informal Economy</span>
+      </h1>
+
+      <!-- Supporting Subtitle -->
+      <p class="text-base sm:text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto mb-8 font-light">
+        60M+ street vendors, gig delivery riders, and micro-entrepreneurs have robust cashflows but zero payslips. EquiScore translates daily digital UPI receipts into transparent, verifiable credit scores using explainable AI.
+      </p>
+
+      <!-- CTA Buttons Row -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="/upload" class="btn-white text-sm py-3 px-6 shadow-white-glow">
+          Upload Your Statement ➔
+        </a>
+        <a href="/dashboard" class="btn-dark text-sm py-3 px-6">
+          Open Live Assessment
+        </a>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="mt-10 grid grid-cols-3 gap-4 pt-8 border-t border-neutral-800/80 max-w-xl mx-auto">
+        <div>
+          <p class="num-mono text-2xl font-bold text-white">4,200+</p>
+          <p class="text-xs text-text-muted mt-0.5">Transactions Ingested</p>
+        </div>
+        <div>
+          <p class="num-mono text-2xl font-bold text-white">100%</p>
+          <p class="text-xs text-text-muted mt-0.5">Deterministic Scoring</p>
+        </div>
+        <div>
+          <p class="num-mono text-2xl font-bold text-white">&lt;0.05</p>
+          <p class="text-xs text-text-muted mt-0.5">Disparity Audit Parity</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Interactive Teaser Island -->
+    <div class="max-w-4xl mx-auto">
+      <ScoreTeaser client:visible />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+[
+  "monthly_gross_receipts",
+  "monthly_operating_expenses",
+  "net_surplus_ratio",
+  "income_volatility_cv",
+  "debt_to_surplus_ratio",
+  "reserve_buffer_days",
+  "tx_frequency_monthly",
+  "data_coverage_months"
+]

@@ -1,0 +1,54 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "Upload Statement or Select Preset",
+    desc: "Ingest CSV statements or test instant synthetic worker archetypes (Chai Vendor, Delivery Partner, Carpenter) with full privacy consent."
+  },
+  {
+    step: "02",
+    title: "Income Synthesis & Anomaly Check",
+    desc: "Our engine separates customer payments from internal transfers, calculates monthly net operating surplus, and measures cashflow stability."
+  },
+  {
+    step: "03",
+    title: "Deterministic Scoring & SHAP Attribution",
+    desc: "Calculates the auditable 0-100 FHS score and evaluates calibrated XGBoost credit risk with feature-level SHAP forces."
+  },
+  {
+    step: "04",
+    title: "Download Digital Financial Passport",
+    desc: "Export an applicant-owned, tamper-evident PDF dossier with SHA-256 verification to present directly to community lenders."
+  }
+];
+---
+
+<section id="how-it-works" class="py-20 bg-black border-t border-[#222222]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-mono text-neutral-400 uppercase tracking-widest">End-to-End Workflow</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">From Raw Digital Ledger to Verifiable Credit</h2>
+      <p class="text-sm text-text-secondary mt-3 font-light">
+        A seamless 4-step journey transforming informal transaction logs into institutional-grade credit evidence.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {steps.map((s) => (
+        <div class="bg-[#0E0E0E] border border-[#222222] rounded-2xl p-6 relative flex flex-col justify-between hover:border-neutral-700 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="num-mono text-2xl font-bold text-white">{s.step}</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">{s.title}</h3>
+            <p class="text-xs text-text-secondary leading-relaxed font-light">{s.desc}</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#222222]">
+            <span class="text-[11px] font-mono text-neutral-500">STEP {s.step} COMPLETED</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

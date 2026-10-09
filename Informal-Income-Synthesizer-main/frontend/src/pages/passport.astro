@@ -1,0 +1,14 @@
+---
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import DigitalPassportViewer from '../components/react/DigitalPassportViewer';
+---
+
+<DashboardLayout
+  title="Digital Financial Passport | EquiScore"
+  activeNav="passport"
+  applicantName="Applicant Dossier"
+  businessName="Verified Financial Passport"
+  statusBadge="PASSPORT READY"
+>
+  <DigitalPassportViewer client:load />
+</DashboardLayout>

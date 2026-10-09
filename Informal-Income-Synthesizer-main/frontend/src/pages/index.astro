@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/astro/Navbar.astro';
+import Hero from '../components/astro/Hero.astro';
+import FeatureGrid from '../components/astro/FeatureGrid.astro';
+import HowItWorks from '../components/astro/HowItWorks.astro';
+import VendorStory from '../components/astro/VendorStory.astro';
+import Footer from '../components/astro/Footer.astro';
+---
+
+<BaseLayout
+  title="EquiScore — Explainable Alternative Credit Scoring & Informal Income Synthesizer"
+  description="Empowering 60M+ unbanked street vendors, gig workers, and micro-entrepreneurs through transparent alternative credit scoring, grounded SHAP explanations, Fairlearn bias auditing, and What-If financial simulations."
+>
+  <div class="min-h-screen bg-canvas text-white flex flex-col selection:bg-lime selection:text-black">
+    <Navbar />
+    <main class="flex-grow">
+      <Hero />
+      <FeatureGrid />
+      <HowItWorks />
+      <VendorStory />
+      
+      <!-- Call to Action Banner -->
+      <section class="py-20 bg-[#0C0D0E] border-t border-[#22252B] relative overflow-hidden">
+        <div class="absolute inset-0 bg-lime/5 blur-3xl rounded-full pointer-events-none -z-10"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime/10 border border-lime/20 text-lime text-xs font-semibold mb-6">
+            <span>GET STARTED IN 30 SECONDS</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+            Ready to Experience Institutional-Grade, Explainable Lending?
+          </h2>
+          <p class="text-base text-text-secondary max-w-2xl mx-auto mb-8">
+            Experience our live interactive dashboard, explore SHAP feature attributions, test what-if scenarios, or audit demographic fairness.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="/dashboard" class="btn-lime text-sm py-3.5 px-8 shadow-lime-glow">
+              Launch Live Assessment ➔
+            </a>
+            <a href="/simulator" class="btn-dark text-sm py-3.5 px-8">
+              Open What-If Sandbox
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>

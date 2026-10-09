@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #000000;
+  --bg-surface: #0A0A0A;
+  --bg-card: #121212;
+  --bg-card-hover: #181818;
+  --border-subtle: #222222;
+  --border-focus: #333333;
+  --border-strong: #444444;
+  --accent-white: #FFFFFF;
+  --accent-text: #000000;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar - Monochrome */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* Stark Monochrome Pill Buttons */
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.12);
+}
+.btn-white:hover {
+  background-color: #E5E5E5;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  border: 1px solid #262626;
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+.btn-dark:hover {
+  background-color: #171717;
+  border-color: #404040;
+  color: #FFFFFF;
+}
+
+/* Minimalist Monochrome Card */
+.card-mono {
+  background-color: #0F0F0F;
+  border: 1px solid #222222;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.card-mono:hover {
+  border-color: #383838;
+  background-color: #141414;
+}
+
+/* Numeric Mono */
+.num-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+}

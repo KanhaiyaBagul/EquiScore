@@ -1,0 +1,6 @@
+{
+  "expected_value_log_odds": 0.4694,
+  "expected_probability": 0.6152,
+  "feature_count": 8,
+  "explainer_type": "TreeExplainer"
+}
